@@ -1,0 +1,28 @@
+.logo{
+    width:197px;
+    height:47px;
+    float: left;
+}
+.logo>img{
+    width:197px;
+    height:47px;
+    float: left;
+}
+
+.small{
+    composes:logo;
+    width:auto;
+    height:43px;
+}
+.small>img{
+    width:auto;
+    height:43px;
+}
+.h1{
+    display: block;
+    float:left;
+    line-height:43px;
+    margin-left:15px;
+    font-size:18px;
+    color:#fff;
+}

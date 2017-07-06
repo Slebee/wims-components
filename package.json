@@ -1,0 +1,53 @@
+{
+  "name": "wims-components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "test-storybook": "storyshots",
+    "test": "node scripts/test.js --env=jsdom"
+  },
+  "author": "slebee",
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/addon-storyshots": "^3.1.8",
+    "@storybook/react": "^3.1.7",
+    "antd": "^2.11.2",
+    "eslint-loader": "^1.9.0",
+    "jest": "^20.0.4",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.4",
+    "react": "^15.6.1",
+    "react-dev-utils": "^3.0.2",
+    "react-dom": "^15.6.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
+    "testMatch": [
+      "<rootDir>/components/**/__tests__/**/*.js?(x)",
+      "<rootDir>/components/**/?(*.)(spec|test).js?(x)"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    }
+  }
+}
